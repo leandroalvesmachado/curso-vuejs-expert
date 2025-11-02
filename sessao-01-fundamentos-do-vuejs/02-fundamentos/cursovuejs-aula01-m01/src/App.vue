@@ -12,6 +12,9 @@ const quantidade = 100
 function verificaQuantidade(valor) {
   return valor > 10
 }
+
+const message = 'Aqui tem uma mensagem'
+const messageHtml = '<h1>Titulo</h1>'
 </script>
 
 <template>
@@ -46,5 +49,20 @@ function verificaQuantidade(valor) {
 
     <!-- Utilizando uma função -->
     <p>{{ verificaQuantidade(quantidade) ? 'É maior que 10' : 'Não é maior que 10' }}</p>
+
+
+    <!-- Diretivas V-(alguma-coisa) -->
+     <div>
+      <div>
+        <h3>Diretiva: v-text</h3>
+        <!-- similar a ter um <p>{{ message }}</p> -->
+        <p v-text="message"></p>
+      </div>
+      <div>
+        <h3>Diretiva: v-html</h3>
+        <!-- renderiza um html -->
+        <p v-html="messageHtml"></p>
+      </div>
+     </div>
   </div>
 </template>
